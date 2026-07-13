@@ -86,7 +86,7 @@ def place_food():
 
     loc = random.randrange(0, len(blank_spots) - 1)
     game_grid[blank_spots[loc][0]][blank_spots[loc][1]] = Status.FOOD
-    print([blank_spots[loc][0]], [blank_spots[loc][1]])
+    #print([blank_spots[loc][0]], [blank_spots[loc][1]])
     return [blank_spots[loc][0],blank_spots[loc][1]]
     
 def reset_grid():
@@ -216,5 +216,6 @@ def game_loop():
     pygame.quit()
     quit()
     
-game_loop()
+if __name__ == "__main__":
+    game_loop()
     
