@@ -3,3 +3,66 @@ Snake AI Learning
 
 ## Proposal
 [Link](https://pennstateoffice365-my.sharepoint.com/:w:/r/personal/cjs8720_psu_edu/_layouts/15/Doc.aspx?sourcedoc=%7BA8D499A2-D3EA-4638-8F9A-43B52A4AA5F9%7D&file=AI801%20-%20Group%206%20Project%20Proposal.docx&fromShare=true&action=default&mobileredirect=true)
+___
+## Summary
+A reinforcement learning implementation of the classic Snake game using **Gymnasium**, **GridMind Q-Learning**, and **Stable Baselines3 Deep Q-Networks (DQN)**.
+
+This project converts a traditional Snake game into a reinforcement learning environment and compares multiple agents:
+
+- Random Agent (baseline)
+- Tabular Q-Learning Agent
+- Deep Q-Network (DQN) Agent
+
+
+---
+
+## Environment
+
+The Snake game is converted into a Gymnasium-compatible environment.
+
+## Project Structure
+
+```
+snake_learning/
+
+│
+├── environment.py
+│   └── Gymnasium Snake environment
+│
+├── snake.py
+│   └── Original Snake game implementation
+│
+├── qlearning_wrapper.py
+│   └── Adapter that converts Snake states for GridMind Q-Learning
+│
+├── train_qlearning.py
+│   └── Trains the tabular Q-Learning agent
+│
+├── evaluate_qlearning.py
+│   └── Evaluates the trained Q-Learning agent
+│
+├── train_dqn.py
+│   └── Trains the DQN agent
+│
+├── evaluate_dqn.py
+│   └── Evaluates the trained DQN agent
+│
+├── random_agent.py
+│   └── Random policy baseline
+│
+└── main.py
+    └── Project menu interface
+```
+
+## Dependencies
+
+This project requires the following libraries:
+
+- `gymnasium` - Provides the reinforcement learning environment interface
+- `numpy` - Used for numerical operations and state representation
+- `stable-baselines3` - Provides the Deep Q-Network (DQN) implementation
+- `torch` - Deep learning framework used by Stable Baselines 3
+- `gridmind` - Provides the tabular Q-learning implementation
+- `tqdm` - Displays training progress bars
+- `tensorboard` - Used for logging and monitoring training runs
+
