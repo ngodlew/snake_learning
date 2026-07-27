@@ -9,6 +9,7 @@ Provides a simple interface for running:
 """
 
 import subprocess
+import sys
 
 # Display the main menu options
 def display_menu():
@@ -26,7 +27,15 @@ def display_menu():
 
 # Run a Python script as a subprocess
 def run_script(script_name):
-    subprocess.run(["python3", script_name])
+    process = subprocess.Popen([sys.executable, script_name], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+    std_out, std_err = process.communicate()
+
+    if std_err:
+        print(f"Error running {script_name}:\n{std_err}")
+    else:
+        print(f"Output from {script_name}:\n{std_out}")
+
 
 # Main function to handle user input and execute the selected option
 def main():
@@ -58,7 +67,6 @@ def main():
             break
         else:
             print("Invalid option. Please select 1-7.")
-
 
 if __name__ == "__main__":
     main()
