@@ -13,7 +13,6 @@ This project converts a traditional Snake game into a reinforcement learning env
 - Tabular Q-Learning Agent
 - Deep Q-Network (DQN) Agent
 
-
 ---
 
 ## Environment
@@ -22,8 +21,58 @@ The Snake game is converted into a Gymnasium-compatible environment.
 
 ## Project Structure
 
+snake_learning
+
+│
+├── dqn_agent.py
+│   └── RL agent to play Snake using DQN within the snake environment
+│
+├── human.py
+│   └── Human plugin to the snake environment for user input to play Snake
+│
+├── q_learning_agent.py
+│   └── RL agent to play Snake using QLearning within the snake environment
+│
+├── snake_environment.py
+│   └── Base Snake game environment as well as added features to support RL
+│
+└── environment.yml
+    └── Script to allow for proper packages to be loaded within conda (Optional).
+        This will also install libraries required for the Archived project.
+
+## External Dependencies
+
+This project requires the following external (non-standard) libraries:
+
+- `gymnasium` - Provides the reinforcement learning environment interface (Version 1.0.0)
+- `numpy` - Used for numerical operations and state representation
+- `torch` - Deep learning framework used by Stable Baselines 3
+- `pygame` - Provides support for the visual and input elements of Snake
+
+## Commands
+
+**To launch a human playable game of Snake**
+
+`python human.py`
+
+**To start training a QLearning agent**
+
+`python q_learning_agent.py`
+
+**To start training a DQN agent**
+
+`python dqn_agent.py`
+
+**NOTE:** The training of the DQN and the QLearning agents will, if run to completion of the
+      program, will produce a .csv file containing the statistics of the run as well as a
+      .pkl file of the relevant training data to reproduce the agent.
+
+## Archived
+
+### Old Project Structure
+
 ```
-snake_learning/
+snake_learning/archive
 
 │
 ├── environment.py
@@ -54,7 +103,7 @@ snake_learning/
     └── Project menu interface
 ```
 
-## Dependencies
+### Dependencies
 
 This project requires the following libraries:
 
