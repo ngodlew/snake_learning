@@ -4,7 +4,8 @@ import torch.nn as nn
 import torch.optim as optim
 import random
 import pickle
-from other import Direction, SnakeEnv
+from snake_environment import Direction, SnakeEnv
+# from other import Direction, SnakeEnv
 from collections import deque
 
 class DQNNetwork(nn.Module):
