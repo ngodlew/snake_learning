@@ -1,6 +1,7 @@
 import numpy as np
 import random
-from other import SnakeEnv, Direction
+from snake_environment import SnakeEnv, Direction
+# from other import SnakeEnv, Direction
 import pickle
 
 alpha = 0.1
