@@ -181,9 +181,11 @@ class SnakeEnv(gym.Env):
 
         match action:
             case Direction.UP:
-                self.body.insert(0, [self.body[0][0], self.body[0][1] + 1])
-            case Direction.DOWN:
                 self.body.insert(0, [self.body[0][0], self.body[0][1] - 1])
+                # self.body.insert(0, [self.body[0][0], self.body[0][1] + 1])
+            case Direction.DOWN:
+                self.body.insert(0, [self.body[0][0], self.body[0][1] + 1])
+                # self.body.insert(0, [self.body[0][0], self.body[0][1] - 1])
             case Direction.LEFT:
                 self.body.insert(0, [self.body[0][0] - 1, self.body[0][1]])
             case Direction.RIGHT:
