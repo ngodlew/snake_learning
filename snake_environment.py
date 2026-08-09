@@ -90,7 +90,8 @@ class SnakeEnv(gym.Env):
             grid_left = self.game_grid[self.body[0][0] - 1][self.body[0][1]]
 
         if self.body[0][0] < GRID_COL - 2:
-            grid_left = self.game_grid[self.body[0][0] + 1][self.body[0][1]]
+            grid_right = self.game_grid[self.body[0][0] + 1][self.body[0][1]]
+            # grid_left = self.game_grid[self.body[0][0] + 1][self.body[0][1]]
 
         danger_ahead = (dir_up and (grid_up == Status.WALL or grid_up == Status.SNAKE)) or \
                        (dir_down and (grid_down == Status.WALL or grid_down == Status.SNAKE)) or \
