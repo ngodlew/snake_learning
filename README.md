@@ -21,6 +21,7 @@ The Snake game is converted into a Gymnasium-compatible environment.
 
 ## Project Structure
 
+```
 snake_learning
 
 │
@@ -39,6 +40,7 @@ snake_learning
 └── environment.yml
     └── Script to allow for proper packages to be loaded within conda (Optional).
         This will also install libraries required for the Archived project.
+```
 
 ## External Dependencies
 
