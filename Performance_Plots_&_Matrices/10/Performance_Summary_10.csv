@@ -1,0 +1,4 @@
+Run ID,Agent,Mean Score,Max Score,Mean Steps,Max Steps
+10,Random Agent,0.12,3.0,9.05,91.0
+10,Q-Learning,3.59,23.0,28.02,247.0
+10,DQN (3 Layer),8.02,27.0,55.77,192.0

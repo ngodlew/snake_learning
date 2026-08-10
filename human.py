@@ -1,6 +1,6 @@
 import sys
 import pygame
-from other import SnakeEnv, Direction
+from snake_environment import SnakeEnv, Direction
 
 def main():
     env = SnakeEnv(render_mode="human", render_fps=5)
